@@ -243,23 +243,24 @@ html {
 }
 
 .canva2 {
-    position: absolute;
+    position: fixed;
     top: 15%;
     right: -144%;
 }
 
 .canva2 p {
-    font-family: 'roboto', sans-serif;
+    font-family: 'playfair', sans-serif;
     font-weight: 200;
-    color: rgba(219, 0, 0, 0.5);
+    color: rgba(255, 255, 255);
     font-size: 150px;
+    font-style: italic;
 }
 
 .canva2 .change {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 46, 81);
     font-size: 150px;
+    font-weight: 200;
     font-family: 'playfair', sans-serif;
-    font-style: italic;
 }
 
 .reseau {
@@ -308,3 +309,82 @@ html {
     line-height: 0.8;
     text-transform: uppercase;
 } */
+
+
+
+
+
+.canva2work {
+    position: fixed;
+    top: 20%;
+    left: -144%;
+    width: 80vw;
+}
+
+
+.project-title h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 45px;
+    /* font-family: 'roboto';
+    font-style: italic; */
+    font-family: 'playfrai';
+    font-style: italic;
+    font-weight: 300;
+}
+
+.project-categ {
+    font-weight: lighter;
+    font-family: 'roboto';
+    font-weight: 200;
+}
+
+.curso {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.1);
+    opacity: 0;
+    margin: -100px 0 0 -100px;
+    background: url(img.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 180px auto;
+    height: 100%;
+}
+
+.project {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 1;
+    position: relative;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.502);
+    mix-blend-mode: difference;
+}
+
+.project:hover {
+    border-bottom: 1px solid rgba(255, 46, 81, 0.027);
+    ;
+    background-image: linear-gradient(transparent, rgba(255, 46, 81, 0.027));
+    color: rgb(255, 255, 255);
+
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}

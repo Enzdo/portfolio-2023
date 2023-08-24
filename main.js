@@ -379,16 +379,18 @@ document.addEventListener('mousemove', onMouseMove);
 
 const canva1 = document.getElementById("canva1"); // Accès à l'élément spécifique
 const canva2 = document.getElementById("canva2"); // Accès à l'élément spécifique
+const canva2work = document.getElementById("canva2work");
 
-const aboutLink = document.getElementById("about");
+const projectLink = document.getElementById("project");
 let animationInProgress = false;
 
-aboutLink.addEventListener("click", () => {
+projectLink.addEventListener("click", () => {
     if (animationInProgress) return; 
     animationInProgress = true; 
 
     canva1.style.backgroundColor = 'transparent';
     canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
 
     gsap.to(camera.position, {
         y: 0, 
@@ -410,6 +412,15 @@ aboutLink.addEventListener("click", () => {
             gsap.to(canva2.style, { 
                 right: "4%", 
                 duration: 0.5, 
+                ease: 'power2.inOut', 
+                onComplete: () => {
+                    animationInProgressAccueil = false; 
+                }
+            });
+            gsap.to(canva2work.style, { 
+                left: "10%", 
+                right: "10%", 
+                duration: 0.7, 
                 ease: 'power2.inOut', 
                 onComplete: () => {
                     animationInProgressAccueil = false; 
@@ -437,6 +448,7 @@ accueil.addEventListener("click", () => {
     animationInProgress = true; 
     canva1.style.backgroundColor = 'transparent';
     canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
 
     gsap.to(camera.position, {
         y: 40, 
@@ -444,6 +456,14 @@ accueil.addEventListener("click", () => {
         z: 0,
         duration: 2, 
         ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgressAccueil = false; 
+        }
+    });
+    gsap.to(canva2work.style, { 
+        left: "-100%", 
+        duration:2, 
+        ease: 'power2.inOut', 
         onComplete: () => {
             animationInProgressAccueil = false; 
         }
@@ -485,10 +505,12 @@ function animate() {
         model.rotation.y += mouseX * modelRotationSpeed;
     }
     
-    console.log(camera.position)
-    console.log(camera.rotation)
+    // console.log(camera.position)
+    // console.log(camera.rotation)
     renderer.render(scene, camera); // Rendu de la scène avec la caméra
 }
 
 
 animate();
+
+
