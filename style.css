@@ -388,3 +388,30 @@ html {
     height: 100%;
     z-index: 1;
 }
+
+.citation {
+    font-size: 1.25rem;
+    color: white;
+    position: absolute;
+    height: auto;
+    left: 15%;
+    top: 2.3%;
+}
+
+.citation p {
+    font-family: "Ubuntu", sans-serif;
+    text-indent: 2.5rem;
+    color: hsla(0, 0%, 100%, .5);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.citation span {
+    font-size: 1.875rem;
+    color: hsla(0, 0%, 100%, .6);
+    font-family: "playfrai";
+    font-style: italic;
+
+}

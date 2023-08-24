@@ -241,6 +241,25 @@ loader.load('model.glb', (gltf) => {
     scene.add(model);
 
 });
+
+
+let sculpture;
+
+loader.load('sculpture.glb', (gltf) => {
+    sculpture = gltf.scene;
+    sculpture.position.set(35, -4.3, 38.8);
+    sculpture.scale.set(1, 1, 1);
+    sculpture.receiveShadow = true;
+    sculpture.rotateZ(0);
+    sculpture.rotateY(0);
+    sculpture.rotateX(-90);
+    sculpture.castShadow = true;
+
+    scene.add(sculpture);
+
+});
+
+
 const material = new THREE.ShaderMaterial({
     uniforms: {
         waveIntensity: { value: 0.0 }, // Ajoutez cet uniforme
@@ -503,9 +522,11 @@ function animate() {
     if (model) {
         const modelRotationSpeed = 0.002;
         model.rotation.y += mouseX * modelRotationSpeed;
+        sculpture.rotation.y += mouseX * modelRotationSpeed;
     }
     
-    // console.log(camera.position)
+    console.log(camera.position)
+    console.log(sculpture.position)
     // console.log(camera.rotation)
     renderer.render(scene, camera); // Rendu de la scène avec la caméra
 }

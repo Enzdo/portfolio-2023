@@ -43,6 +43,7 @@
 }
 
 .slider {
+    cursor: pointer;
     height: 80%;
     width: 33%;
     margin: auto;
