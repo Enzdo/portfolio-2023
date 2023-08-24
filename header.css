@@ -1,0 +1,105 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+
+    z-index: 999;
+    width: 100vw;
+    height: 5vh;
+    border-bottom: 0.02px solid white;
+    width: 100%;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    padding-left: 5%;
+}
+
+.header .logo img {
+    width: 15%;
+    height: auto;
+    padding-left: 5%;
+    mix-blend-mode: difference;
+}
+
+.header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 33%;
+    height: auto;
+    padding-right: 5%;
+    mix-blend-mode: difference;
+}
+
+.header .nav a {
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.slider {
+    height: 80%;
+    width: 33%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider::before,
+.slider::after {
+
+    content: "";
+    height: 80%;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    height: 100%;
+    color: white;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: 1400%;
+}
+
+.slider .slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+}
+
+.slider .slide span {
+    color: rgb(255, 46, 81);
+    font-family: "Dancing Script";
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
