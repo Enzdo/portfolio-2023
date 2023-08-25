@@ -10,9 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tweenjs/tween.js": "^21.0.0",
+    "ammo.js": "^0.0.10",
+    "cannon": "^0.6.2",
     "gsap": "^3.12.2",
     "three": "^0.155.0",
-    "tone": "^14.7.77"
+    "tone": "^14.7.77",
+    "tweenjs": "^1.0.2"
   },
   "devDependencies": {
     "webpack": "^5.88.2",

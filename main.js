@@ -4,8 +4,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { gsap } from 'gsap';
 import * as Tone from 'tone';
 
-
-
 const overlay = document.querySelector('.overlay');
 const cursor = document.createElement('div');
 const cursorbaby = document.createElement('div');
@@ -282,6 +280,252 @@ scene.add(directionalLight);
 
 
 
+
+$(document).ready(function () {
+
+    var entries = [
+
+        { image: './logo_software/HTML5.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Html' },
+        { image: './logo_software/css.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Css' },
+        { image: './logo_software/java.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Javascript' },
+        { image: './logo_software/phpobject.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Php' },
+        { image: './logo_software/sql.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Sql' },
+        { image: './logo_software/scss.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Scss' },
+        { image: './logo_software/vue.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Vue' },
+        { image: './logo_software/tailwind.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Tailwind' },
+        { image: './logo_software/three.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Three.js' },
+        { image: './logo_software/symfony.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Symfony' },
+        { image: './logo_software/nodejs.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Node.js' },
+        { image: './logo_software/Wordpress_Blue_logo.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Wordpress' }
+    ];
+
+    var settings = {
+
+        entries: entries,
+        width: '100%',
+        height: '100%',
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'none',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.5,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '15',
+        fontColor: '#fff',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '15',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'normal',//bold
+        tooltipFontStyle: 'normal',//italic 
+        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'center',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
+
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $('#competence').svg3DTagCloud(settings);
+
+});
+
+
+$(document).ready(function () {
+
+    var entries = [
+
+        { image: './logo_software/HTML5.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Html' },
+        { image: './logo_software/css.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Css' },
+        { image: './logo_software/java.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Javascript' },
+        { image: './logo_software/phpobject.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Php' },
+        { image: './logo_software/sql.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Sql' },
+        { image: './logo_software/scss.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Scss' },
+        { image: './logo_software/vue.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Vue' },
+        { image: './logo_software/tailwind.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Tailwind' },
+        { image: './logo_software/three.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Three.js' },
+        { image: './logo_software/spline.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Spline' },
+        { image: './logo_software/symfony.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Symfony' },
+        { image: './logo_software/nodejs.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Node.js' },
+        { image: './logo_software/Wordpress_Blue_logo.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Wordpress' }
+    ];
+
+    var settings = {
+
+        entries: entries,
+        width: '350px',
+        height: '350px',
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'none',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.5,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '15',
+        fontColor: '#fff',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '15',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'normal',//bold
+        tooltipFontStyle: 'normal',//italic 
+        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'center',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
+
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $('#competence-tel').svg3DTagCloud(settings);
+
+});
+
+$(document).ready(function () {
+
+    var entries = [
+
+        { image: './logo_software/affter.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'After effect' },
+        { image: './logo_software/illustrator.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Illustrator' },
+        { image: './logo_software/indesign.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Indesign' },
+        { image: './logo_software/photoshop.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Photoshop' },
+        { image: './logo_software/premiere.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Premiere pro' },
+        { image: './logo_software/xd.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Xd' },
+        { image: './logo_software/figma.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Figma' },
+        { image: './logo_software/blender.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Blender' },
+        { image: './logo_software/3ds.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: '3ds max' }
+    ];
+ 
+    var settings = {
+
+        entries: entries,
+        width: '100%',
+        height: '100%',
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'none',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.5,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '15',
+        fontColor: '#fff',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '15',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'normal',//bold
+        tooltipFontStyle: 'normal',//italic 
+        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'center',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
+
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $('#digital').svg3DTagCloud(settings);
+
+});
+
+$(document).ready(function () {
+
+    var entries = [
+
+        { image: './logo_software/affter.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'After effect' },
+        { image: './logo_software/illustrator.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Illustrator' },
+        { image: './logo_software/indesign.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Indesign' },
+        { image: './logo_software/photoshop.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Photoshop' },
+        { image: './logo_software/premiere.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Premiere pro' },
+        { image: './logo_software/xd.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Xd' },
+        { image: './logo_software/figma.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Figma' },
+        { image: './logo_software/blender.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: 'Blender' },
+        { image: './logo_software/3ds.png', width: '50', height: '50', url: 'http://jquery-plugins.net/', target: '_top', tooltip: '3ds max' }
+    ];
+ 
+    var settings = {
+
+        entries: entries,
+        width: '100%',
+        height: '100%',
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'none',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.5,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '15',
+        fontColor: '#fff',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '15',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'normal',//bold
+        tooltipFontStyle: 'normal',//italic 
+        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'center',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
+
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $('#digitaux').svg3DTagCloud(settings);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const targetObject = new THREE.Object3D();
 scene.add(targetObject);
 directionalLight.target = targetObject;
@@ -396,9 +640,14 @@ window.addEventListener('mousemove', (event) => {
 
 document.addEventListener('mousemove', onMouseMove);
 
-const canva1 = document.getElementById("canva1"); // Accès à l'élément spécifique
-const canva2 = document.getElementById("canva2"); // Accès à l'élément spécifique
+var IsActiveMneu = 'canva1';
+
+const canva1 = document.getElementById("canva1"); 
+const canva2 = document.getElementById("canva2"); 
 const canva2work = document.getElementById("canva2work");
+const canva3about = document.getElementById("canva3about");
+const canva3img = document.getElementById("canva3img");
+const canva4contact = document.getElementById("canva4contact");
 
 const projectLink = document.getElementById("project");
 let animationInProgress = false;
@@ -410,6 +659,9 @@ projectLink.addEventListener("click", () => {
     canva1.style.backgroundColor = 'transparent';
     canva2.style.backgroundColor = 'transparent';
     canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
 
     gsap.to(camera.position, {
         y: 0, 
@@ -422,31 +674,103 @@ projectLink.addEventListener("click", () => {
         }
     });
 
-    gsap.to(canva1.style, { 
-        left: "-140%", 
-        duration: 1.8, 
-        ease: 'power3.inOut', 
-        onComplete: () => {
-            animationInProgressAccueil = false; 
-            gsap.to(canva2.style, { 
-                right: "4%", 
-                duration: 0.5, 
-                ease: 'power2.inOut', 
-                onComplete: () => {
-                    animationInProgressAccueil = false; 
-                }
-            });
-            gsap.to(canva2work.style, { 
-                left: "10%", 
-                right: "10%", 
-                duration: 0.7, 
-                ease: 'power2.inOut', 
-                onComplete: () => {
-                    animationInProgressAccueil = false; 
-                }
-            });
-        }
-    });
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    } else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }
+
+   
+
+
 
     gsap.to(camera.rotation, {
         _y: 90, 
@@ -458,6 +782,242 @@ projectLink.addEventListener("click", () => {
     });
 });
 
+
+const aboutLink = document.getElementById("about");
+
+aboutLink.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+
+    gsap.to(camera.position, {
+        y: 0, 
+        z: -40,
+        x: -40,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                        startFalling();
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }else if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                        startFalling();
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-141%", 
+            duration: 1.8, 
+            ease: 'power2.inOut', 
+        });
+    }
+    else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                        startFalling();
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }
+
+    gsap.to(camera.rotation, {
+        _y: 90, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
+
+const ContactLink = document.getElementById("ContactLink");
+
+ContactLink.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+
+    gsap.to(camera.position, {
+        y: 0, 
+        z: 80,
+        x: 80,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "4%", 
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    }else if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "4%", 
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-141%", 
+            duration: 1.8, 
+            ease: 'power2.inOut', 
+        });
+    }else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "4%", 
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }
+
+    gsap.to(camera.rotation, {
+        _y: 90, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
+
+
 const accueil = document.getElementById("accueil");
 
 let animationInProgressAccueil = false;
@@ -468,6 +1028,73 @@ accueil.addEventListener("click", () => {
     canva1.style.backgroundColor = 'transparent';
     canva2.style.backgroundColor = 'transparent';
     canva2work.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+    if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-100%", 
+            duration:2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "4%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+    } else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "4%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "4%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+    }
 
     gsap.to(camera.position, {
         y: 40, 
@@ -477,28 +1104,6 @@ accueil.addEventListener("click", () => {
         ease: 'power3.inOut', 
         onComplete: () => {
             animationInProgressAccueil = false; 
-        }
-    });
-    gsap.to(canva2work.style, { 
-        left: "-100%", 
-        duration:2, 
-        ease: 'power2.inOut', 
-        onComplete: () => {
-            animationInProgressAccueil = false; 
-        }
-    });
-
-    gsap.to(canva2.style, { 
-        right: "-100%", 
-        duration: 2, 
-        ease: 'power2.inOut', 
-        onComplete: () => {
-            animationInProgressAccueil = false; 
-            gsap.to(canva1.style, { 
-                left: "4%", 
-                duration: 0.5, 
-                ease: 'power3.inOut', 
-            });
         }
     });
 
@@ -515,7 +1120,6 @@ accueil.addEventListener("click", () => {
 
 
 
-
 function animate() {
     requestAnimationFrame(animate);
     animateParticles();
@@ -524,11 +1128,8 @@ function animate() {
         model.rotation.y += mouseX * modelRotationSpeed;
         sculpture.rotation.y += mouseX * modelRotationSpeed;
     }
-    
-    console.log(camera.position)
-    console.log(sculpture.position)
-    // console.log(camera.rotation)
-    renderer.render(scene, camera); // Rendu de la scène avec la caméra
+
+    renderer.render(scene, camera); 
 }
 
 
