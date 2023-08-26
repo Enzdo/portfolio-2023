@@ -1047,7 +1047,7 @@ accueil.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva1"
                 gsap.to(canva1.style, { 
-                    left: "4%", 
+                    left: "6%", 
                     duration: 0.5, 
                     ease: 'power3.inOut', 
                 });
@@ -1062,7 +1062,7 @@ accueil.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva1"
                 gsap.to(canva1.style, { 
-                    left: "4%", 
+                    left: "6%", 
                     duration: 0.5, 
                     ease: 'power3.inOut', 
                 });
@@ -1085,7 +1085,7 @@ accueil.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva1"
                 gsap.to(canva1.style, { 
-                    left: "4%", 
+                    left: "6%", 
                     duration: 0.5, 
                     ease: 'power3.inOut', 
                 });
