@@ -362,6 +362,7 @@ html {
 }
 
 .project {
+    text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
     display: flex;
@@ -540,11 +541,39 @@ html {
 
 .canva4contact {
     position: fixed;
-    top: 20%;
+    top: 0%;
+    height: 100vh;
     left: -140%;
-    width: 80vw;
-    background-color: white;
+    width: 100vw;
 }
+
+.canva4contact .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 7em;
+}
+
+
+.canva4contact .contact a {
+    font-style: italic;
+    text-decoration: none;
+    color: #ffffff79;
+    font-family: "Dancing Script";
+    transition: 0.3s;
+}
+
+.canva4contact .contact a:hover {
+    color: #ffffff;
+}
+
+
+
+
+
 
 
 .test {

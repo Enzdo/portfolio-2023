@@ -942,7 +942,7 @@ ContactLink.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva4contact"
                 gsap.to(canva4contact.style, { 
-                    left: "4%", 
+                    left: "0%", 
                     duration: 2, 
                     ease: 'power3.inOut', 
                     onComplete: () => {
@@ -960,7 +960,7 @@ ContactLink.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva4contact"
                 gsap.to(canva4contact.style, { 
-                    left: "4%", 
+                    left: "0%",  
                     duration: 2, 
                     ease: 'power3.inOut', 
                     onComplete: () => {
@@ -984,7 +984,7 @@ ContactLink.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva4contact"
                 gsap.to(canva4contact.style, { 
-                    left: "4%", 
+                    left: "0%", 
                     duration: 2, 
                     ease: 'power3.inOut', 
                     onComplete: () => {
