@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script src='./jquery.svg3dtagcloud.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
 </head>
 
@@ -105,17 +107,34 @@
 
         </div>
         <div id="canva3about" class="canva3about">
-            <p class="name"><span>Hey</span> I am ALT <br> I have <span> Nineteen </span>years old <br> And i am
+            <!-- <p class="name"><span>Hey</span> I am ALT I have <br><span> Nineteen </span>years old <br> And i am
                 <span>Frontend</span> <br> developer in
                 <span>France</span>
-            </p>
-            <p class="tech">My web <br> <span> dev</span> essentials.</p>
+            </p> -->
+            <div class="name">
+                <p class="p1"><span>Hey</span> I am ALT I have</p>
+                <p class="p2"><span> Nineteen </span>years old</p>
+                <p class="p3">And i am
+                    <span>Frontend</span>
+                </p>
+                <p class="p4">developer in
+                    <span>France</span>
+                </p>
+            </div>
+
+
+            <!-- <p class="tech">My web <br> <span> dev</span> essentials.</p>
             <div id="competence">
 
+            </div> -->
+            <div id="canva3img" class="canva3img">
+                <div class="wrapperImg">
+
+                </div>
+                <div class="hero-title">
+                    <h1>It's me</h1>
+                </div>
             </div>
-        </div>
-        <div id="canva3img" class="canva3img">
-            <img src="neom-I7NOiVT6jq0-unsplash.jpg" alt="">
         </div>
         <div id="canva4contact" class="canva4contact">
             <h1>Hello world</h1>
@@ -237,6 +256,9 @@
     <script type="module" src="/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TweenMax.min.js"></script>
+    <script src="./hover-effect.umd.js"></script>
     <script>const slider = document.querySelector('.slider');
         const header = document.querySelector('.header');
 
@@ -246,7 +268,53 @@
 
         slider.addEventListener('mouseleave', () => {
             header.style.borderBottom = '0.02px solid white'; // Remettez votre style par défaut
-        });</script>
+        });
+
+        var hoverDistort = new hoverEffect({
+            parent: document.querySelector('.wrapperImg'),
+            intensity: 0.5,
+            image1: 'photo1.jpg',
+            image2: 'photo2.jpg',
+            displacementImage: '4.png'
+        });
+
+        var textWrapper = document.querySelector('.hero-title');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        $(document).ready(function () {
+
+            $('.wrapperImg').hover(
+                function () {
+                    anime.timeline({ loop: false })
+                        .add({
+                            targets: '.hero-title .letter',
+                            translateX: [80, 0],
+                            translateZ: 0,
+                            opacity: [0, 1],
+                            easing: "easeOutExpo",
+                            duration: 1400,
+                            delay: (el, i) => 100 + 40 * i
+                        })
+                },
+
+                function () {
+                    anime.timeline({ loop: false })
+                        .add({
+                            targets: '.hero-title .letter',
+                            translateX: [0, -80],
+                            opacity: [1, 0],
+                            easing: "easeInExpo",
+                            duration: 800,
+                            delay: (el, i) => 40 * i
+                        });
+                }
+            );
+
+        });
+
+
+
+    </script>
 
 
 </body>

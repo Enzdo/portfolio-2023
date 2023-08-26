@@ -823,7 +823,6 @@ aboutLink.addEventListener("click", () => {
                     ease: 'power3.inOut', 
                     onComplete: () => {
                         animationInProgressAccueil = false; 
-                        startFalling();
                     }
                 })
                 gsap.to(canva3img.style, { 
@@ -851,7 +850,6 @@ aboutLink.addEventListener("click", () => {
                     ease: 'power3.inOut', 
                     onComplete: () => {
                         animationInProgressAccueil = false; 
-                        startFalling();
                     }
                 })
                 gsap.to(canva3img.style, { 
@@ -886,7 +884,6 @@ aboutLink.addEventListener("click", () => {
                     ease: 'power3.inOut', 
                     onComplete: () => {
                         animationInProgressAccueil = false; 
-                        startFalling();
                     }
                 })
                 gsap.to(canva3img.style, { 
