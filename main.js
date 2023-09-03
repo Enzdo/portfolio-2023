@@ -650,7 +650,135 @@ const canva3img = document.getElementById("canva3img");
 const canva4contact = document.getElementById("canva4contact");
 
 const projectLink = document.getElementById("project");
+const projectLinktel = document.getElementById("projecttel");
 let animationInProgress = false;
+
+projectLinktel.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+    gsap.to(camera.position, {
+        y: 0, 
+        z: 40,
+        x: 40,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    } else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva2"
+                gsap.to(canva2.style, { 
+                    right: "4%", 
+                    duration: 0.5, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        console.log(IsActiveMneu)
+                        animationInProgressAccueil = false; 
+                    }
+                });
+                gsap.to(canva2work.style, { 
+                    left: "10%", 
+                    right: "10%", 
+                    duration: 0.7, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }
+    gsap.to(camera.rotation, {
+        _y: 90, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
+
+
 
 projectLink.addEventListener("click", () => {
     if (animationInProgress) return; 
@@ -784,6 +912,130 @@ projectLink.addEventListener("click", () => {
 
 
 const aboutLink = document.getElementById("about");
+const aboutLinktel = document.getElementById("abouttel");
+
+aboutLinktel.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+
+    gsap.to(camera.position, {
+        y: 0, 
+        z: -40,
+        x: -40,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }else if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-141%", 
+            duration: 1.8, 
+            ease: 'power2.inOut', 
+        });
+    }
+    else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva3about"
+                gsap.to(canva3about.style, { 
+                    left: "10%",
+                    right:"10%" ,
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+                gsap.to(canva3img.style, { 
+                    right: "4%", 
+                    duration: 2, 
+                    ease: 'power2.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                });
+            }
+        });
+    }
+
+    gsap.to(camera.rotation, {
+        _y: 90, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
 
 aboutLink.addEventListener("click", () => {
     if (animationInProgress) return; 
@@ -908,7 +1160,122 @@ aboutLink.addEventListener("click", () => {
     });
 });
 
+
+
+
+
+
+
+
+
+
 const ContactLink = document.getElementById("ContactLink");
+const ContactLinktel = document.getElementById("ContactLinktel");
+
+ContactLinktel.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva3about.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+
+    gsap.to(camera.position, {
+        y: 0, 
+        z: 80,
+        x: 80,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+
+    if(IsActiveMneu === "canva1"){
+        gsap.to(canva1.style, { 
+            left: "-140%", 
+            duration: 1.8, 
+            ease: 'power3.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "0%", 
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    }else if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "0%",  
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-141%", 
+            duration: 1.8, 
+            ease: 'power2.inOut', 
+        });
+    }else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva4contact"
+                gsap.to(canva4contact.style, { 
+                    left: "0%", 
+                    duration: 2, 
+                    ease: 'power3.inOut', 
+                    onComplete: () => {
+                        animationInProgressAccueil = false; 
+                    }
+                })
+            }
+        });
+    
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }
+
+    gsap.to(camera.rotation, {
+        _y: 90, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
+
 
 ContactLink.addEventListener("click", () => {
     if (animationInProgress) return; 
@@ -1015,7 +1382,111 @@ ContactLink.addEventListener("click", () => {
 });
 
 
+
+
+
+
+
+
+
 const accueil = document.getElementById("accueil");
+const accueiltel = document.getElementById("accueiltel");
+
+accueiltel.addEventListener("click", () => {
+    if (animationInProgress) return; 
+    animationInProgress = true; 
+    canva1.style.backgroundColor = 'transparent';
+    canva2.style.backgroundColor = 'transparent';
+    canva2work.style.backgroundColor = 'transparent';
+    canva4contact.style.backgroundColor = 'transparent';
+    canva3img.style.backgroundColor = 'transparent';
+
+    if(IsActiveMneu === "canva2"){
+        gsap.to(canva2work.style, { 
+            left: "-100%", 
+            duration:2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+            }
+        });
+    
+        gsap.to(canva2.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "6%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+    } else if(IsActiveMneu === "canva3about"){
+        gsap.to(canva3about.style, { 
+            left: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "6%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+        gsap.to(canva3img.style, { 
+            right: "-100%", 
+            duration: 2, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+            }
+        });
+    }else if(IsActiveMneu === "canva4contact"){
+        gsap.to(canva4contact.style, { 
+            left: "-141%", 
+            duration:1.8, 
+            ease: 'power2.inOut', 
+            onComplete: () => {
+                animationInProgressAccueil = false; 
+                IsActiveMneu = "canva1"
+                gsap.to(canva1.style, { 
+                    left: "6%", 
+                    duration: 0.5, 
+                    ease: 'power3.inOut', 
+                });
+            }
+        });
+    }
+
+    gsap.to(camera.position, {
+        y: 40, 
+        x: 0,
+        z: 0,
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgressAccueil = false; 
+        }
+    });
+
+
+    gsap.to(camera.rotation, {
+        _y: 0, 
+        duration: 2, 
+        ease: 'power3.inOut', 
+        onComplete: () => {
+            animationInProgress = false; 
+        }
+    });
+});
 
 let animationInProgressAccueil = false;
 
@@ -1133,3 +1604,14 @@ function animate() {
 animate();
 
 
+const hambugerIcon = document.querySelector('.nav-toggler')
+const body = document.querySelector('html')
+const navigation = document.querySelector("nav")
+
+hambugerIcon.addEventListener("click", toggleNav)
+
+function toggleNav(){
+	hambugerIcon.classList.toggle("active")
+	navigation.classList.toggle("active")
+	body.classList.toggle("active")
+}
