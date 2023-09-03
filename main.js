@@ -946,7 +946,7 @@ aboutLinktel.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva3about"
                 gsap.to(canva3about.style, { 
-                    left: "10%",
+                    left: "20%",
                     right:"10%" ,
                     duration: 2, 
                     ease: 'power3.inOut', 
@@ -973,7 +973,7 @@ aboutLinktel.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva3about"
                 gsap.to(canva3about.style, { 
-                    left: "10%",
+                    left: "20%",
                     right:"10%" ,
                     duration: 2, 
                     ease: 'power3.inOut', 
@@ -1007,7 +1007,7 @@ aboutLinktel.addEventListener("click", () => {
                 animationInProgressAccueil = false; 
                 IsActiveMneu = "canva3about"
                 gsap.to(canva3about.style, { 
-                    left: "10%",
+                    left: "20%",
                     right:"10%" ,
                     duration: 2, 
                     ease: 'power3.inOut', 
