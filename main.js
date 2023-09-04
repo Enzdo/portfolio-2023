@@ -226,7 +226,7 @@ const analyser = new Tone.Analyser('waveform', 1024);
 const loader = new GLTFLoader();
 let model;
 
-loader.load('./public/model.glb', (gltf) => {
+loader.load('./model.glb', (gltf) => {
     model = gltf.scene;
     model.position.set(20, 5, 5);
     model.scale.set(120, 120, 120);
@@ -243,7 +243,7 @@ loader.load('./public/model.glb', (gltf) => {
 
 let sculpture;
 
-loader.load('./public/sculpture.glb', (gltf) => {
+loader.load('./sculpture.glb', (gltf) => {
     sculpture = gltf.scene;
     sculpture.position.set(35, -4.3, 38.8);
     sculpture.scale.set(1, 1, 1);
