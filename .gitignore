@@ -13,7 +13,6 @@
 /dist/
 /out/
 /.next/
-/public/
 
 # Fichiers de cache
 /.cache/
